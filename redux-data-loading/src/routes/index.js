@@ -12,7 +12,11 @@ export default (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
+
+        {/* use onEnter provided by react router with a custom callback function to fetch data */}
+        {/* called when a route is about to be entered */}
         <Route path="photos" component={Photos} onEnter={onPhotosEnter} />
+        
       </Route>
     </Router>
   </Provider>
