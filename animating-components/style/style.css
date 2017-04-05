@@ -1,0 +1,39 @@
+img {
+  width: 200px;
+}
+
+ul {
+  position: relative;
+}
+
+li {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* starting state of animation when element is added */
+/* 'fade'- is name we defined in animation options */
+.fade-enter {
+  transform: rotateX(90deg) rotateZ(90deg);
+  opacity: 0;
+}
+
+/* end state of animation when element is added */
+.fade-enter-active {
+  transform: rotateX(0deg) rotateZ(0deg);
+  opacity: 1.0;
+  transition: .5s ease-in all;
+}
+
+/* starting animation state for removal of element */
+.fade-leave {
+  opacity: 1.0;
+}
+
+/* ending animation state for removal of element */
+.fade-leave-active {
+  opacity: 0;
+  transition: .5s ease-out all;
+}
